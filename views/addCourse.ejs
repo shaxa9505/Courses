@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+    <body>
+
+        <!-- ============= HEADER START ============ -->
+
+
+        <header>
+            <div class="header-nav">
+                <div class="container">
+
+                    <%- include('./partials/navbar') %>
+
+                        <h2 class="mt-5 text-center">
+                            <%= title %>
+                        </h2>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- ============= HEADER END ============ -->
+
+
+        <!-- ============= SECTION START ============ -->
+
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-4">
+                        <form method="POST" action="/addCourse">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Kursning nomini kiriting</label>
+                                <input type="text" class="form-control" name="title" id="title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="term" class="form-label">Kursning davomiyligini kiriting</label>
+                                <input type="text" class="form-control" name="term" id="term">
+                            </div>
+                            <div class="mb-3">
+                                <label for="teacher" class="form-label">O'qituvchini ismini kiriting</label>
+                                <input type="text" class="form-control" name="teacher" id="teacher">
+                            </div>
+                            <div class="mb-3">
+                                <label for="select" class="form-label">Hududni tanlang</label>
+                                <select name="select" id="select">
+                                    <option value=""></option>
+                                    <option value="Jizzax">Jizzax</option>
+                                    <option value="Samarqand">Samarqand</option>
+                                    <option value="Toshkent">Toshkent</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Yuborish</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+
+</html>

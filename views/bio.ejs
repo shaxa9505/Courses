@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head") %>
+
+<body>
+
+    <!-- ============= HEADER START ============ -->
+
+    <header>
+        <div class="header-nav">
+            <div class="container">
+                
+                <%- include("./partials/navbar") %>
+
+                <h2 class="mt-2 text-center"><%= title %></h2>
+
+                <div class="row mt-4 justify-content-center">
+                    <% bioCourse.forEach((item, index)=> {%>
+                        <div class="col-lg-8">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Kurs: <b><%= item.title %></b>
+                                    </h5>
+                                    <p class="card-text">
+                                        davomiylig: <b><%= item.term %></b>
+                                    </p>
+                                    <p class="text">
+                                        O'qituvchi: <b><%= item.teacher %></b>
+                                    </p>
+                                    <a href="/courses" class="btn btn-primary">Orqaga qaytish</a>
+                                    <a href="/course" class="btn btn-info">Kursga yozilish</a>
+                                </div>
+                            </div>
+                        </div>
+                        <%}) %>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div class="row mt-4">
+    <% courses.forEach((item, index)=> {%>
+        <div class="col-lg-3">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Kurs: <b><% if(item.title.length < 12) {%> <%= item.title %> <%} else {%> <%= item.title.slice(0, 12) %>... <%}  %></b>
+                    </h5>
+                    <p class="card-text">
+                        davomiylig: <b><%= item.term %></b>
+                    </p>
+                    <p class="text">
+                        O'qituvchi: <b><% if(item.teacher.length < 12) {%> <%= item.teacher %> <%} else {%> <%= item.teacher.slice(0, 12) %>... <%} %></b>
+                    </p>
+                    <a href="/bio/<%= item.id %>" class="btn btn-primary">
+                        Batafsil
+                    </a>
+                    <a href="/editCourse/<%= item.id %>" class="btn btn-warning">Edit</a>
+                    <a href="/deleteCourse/<%= item.id %>" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+        <%}) %>
+
+</div>

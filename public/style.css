@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================ HEADER START ============== */
+
+header .header-nav .card {
+    min-height: 212px;
+}
+header .header-nav .card .card-body .text {
+    font-size: 17px;
+}
